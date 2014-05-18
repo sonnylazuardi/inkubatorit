@@ -73,7 +73,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#"><h4>Home</h4></a>
+          <a class="brand" href="<?php echo base_url() ?>"><h4>Inkubator IT</h4></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li  class="active"><a href="#"> <img src="<?php echo base_url() ?>transbg/home.png" height="40px" width="40px"> Home</a></li>
