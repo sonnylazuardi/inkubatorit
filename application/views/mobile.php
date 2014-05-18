@@ -1,0 +1,5 @@
+<div class="row" id="content-komunitas">
+	<div class="col-xs-12">
+		<p>Komunitas mobile adalah komunitas dalam inkubator IT beranggotakan pengembang perangkat lunak yang memiliki minat dalam pengembangan aplikasi mobile. Kami memiliki ketertarikan dalam mengembangkan aplikasi pada smartphone seperti iPhone, Android, BlackBerry dan Windows Phone 7, pada tablet seperti iPad, Tablet Android dan Playbook, serta pada featured phone seperti Symbian. Aplikasi yang dikembangkan sendiri sering dibagi menjadi tiga yaitu game, aplikasi sederhana dan sistem.Pada komunitas ini kami bersama-sama mempelajari "senjata-senjata" yang diperlukan untuk mengembangkan aplikasi mobile seperti Java untuk Android, Java untuk J2ME, Objective C untuk iOS, libGDX, Cocoa Framework, Qt, Silverlight, XNA, dan lain sebagainya. Kami juga menjadi ujung tombak HMIF dalam mengerjakan proyek yang berhubungan dengan pengembangan aplikasi mobile.</p>
+	</div>
+</div>

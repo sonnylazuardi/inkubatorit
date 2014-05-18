@@ -1,0 +1,6 @@
+<div class="row" id="content-komunitas">
+	<div class="col-xs-12">
+		<p>Komunitas cyber beranggotakan sekumpulan mahasiswa teknik informatika dan sistem teknologi informasi ITB yang memiliki minat dalam bidang keamanan jaringan. Seperti komunitas-komunitas lain pada IIT, komunitas cyber dibentuk untuk menjawab kebutuhan anggota HMIF terhadap kemajuan teknologi keamanan jaringan saat ini. </p>
+		<p>Berbagai isu dan permasalahan mengenai sistem keamanan jaringan yang marak terjadi dapat diatasi dengan pengetahuan yang mumpuni di bidang cyber. Pengetahuan dalam bidang keamanan jaringan sangat penting dilakukan untuk memonitor akses jaringan dan mencegah penyalahgunaan sumber daya jaringan yang tidak sah. Tantangan seorang spesialis keamanan jaringan adalah untuk mengatasi segala bentuk ancaman baik fisik maupun logik yang langsung atau tidak langsung mengganggu kegiatan yang sedang berlangsung dalam jaringan, serta menciptakan jaringan komputer yang aman dan sustainable untuk pengembangan lanjutan. Dengan bergabung dalam komunitas ini, mahasiswa diharapkan dapat bersama-sama mengembangkan diri untuk menjadi spesialis dalam keamanan jaringan dan mengaplikasikan pengetahuan yang didapatkan untuk menjawab tantangan tersebut.</p>
+	</div>
+</div>

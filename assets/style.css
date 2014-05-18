@@ -1,0 +1,19 @@
+body{
+	padding-top : 120px;
+	font-family : Arial;
+}
+
+a:link, a:visited{
+	color : slateGray;
+	text-decoration : none;
+}
+
+a:hover{
+	color : #444;
+	border-bottom-color:#444;
+}
+
+p{
+	line-height : 20px;
+}
+

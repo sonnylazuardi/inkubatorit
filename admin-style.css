@@ -1,0 +1,51 @@
+body {
+	background: url(img/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#article_icon:hover {
+	margin-top : -30px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+#port_icon:hover {
+	margin-top : -30px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+#admin_icon:hover {
+	margin-top : -30px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+#area {
+	margin-top: 10%;
+}
+
+#post-list {
+	padding: 10px;
+	background: #ffffff;
+	-webkit-border-radius: 10px;
+  	-moz-border-radius: 10px;
+  	-o-border-radius: 10px;
+  	border-radius: 10px;
+}
+
+#file_manager-box {
+	height:100%;
+	margin-top: -80px;
+	padding-top: 60px;
+}
+
+#file_manager {
+	height: 100%;
+}
