@@ -5,10 +5,10 @@
 		{
 			$this->load->model('article_model');
 			$data['incl'] = 'article';
-			$data['artikel'] = $this->article_model->get_post(2,0);
+			$data['artikel'] = $this->article_model->get_post(12,0);
 			$data['kategori'] = 'all';
 			$data['new_exist'] = false;
-			$data['old_exist'] = ($this->article_model->get_post(2,2)->num_rows() > 0);
+			$data['old_exist'] = ($this->article_model->get_post(12,12)->num_rows() > 0);
 			$data['page'] = 1;
 			$this->load->view('page',$data);
 		}
@@ -19,9 +19,9 @@
 			$data['incl'] = 'article';
 			$data['kategori'] = 'all';
 			if ($p > 1){
-				$data['artikel'] = $this->article_model->get_post(2,($p-1)*2);
-				$data['new_exist'] = ($this->article_model->get_post(2,($p-2)*2)->num_rows() > 0);
-				$data['old_exist'] = ($this->article_model->get_post(2,$p*2)->num_rows() > 0);
+				$data['artikel'] = $this->article_model->get_post(12,($p-1)*12);
+				$data['new_exist'] = ($this->article_model->get_post(12,($p-2)*12)->num_rows() > 0);
+				$data['old_exist'] = ($this->article_model->get_post(12,$p*12)->num_rows() > 0);
 				$data['page'] = $p;
 			}else{
 				redirect('article');
@@ -49,7 +49,7 @@
 		{
 			$this->load->model('article_model');
 			$data['incl'] = 'post';
-			$data['artikel'] = $this->article_model->get_post_id($id);
+			$data['post'] = $this->article_model->get_post_id($id)->row();
 			$this->load->view('page',$data);
 		}
 	}

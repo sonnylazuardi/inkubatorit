@@ -1,12 +1,15 @@
+<div class="container">
+
 <div class="row" style="height:100%">
-	<div class="col-xs-12" style="height:10%;" align="center">
-		<ul class="nav nav-pills" style="width:250px;">
+	<div class="col-md-6 col-md-offset-3" style="height:10%;" align="center">
+		<ul class="nav nav-pills">
   			<li class="active"><a href="#about" data-toggle="tab">About</a></li>
 		  	<li><a href="#visi" data-toggle="tab">Visi & Misi</a></li>
 		  	<li><a href="#contact" data-toggle="tab">Contact</a></li>
 		</ul>
+		<hr>
 	</div>
-	<div class="col-xs-12" id="about-content">
+	<div class="col-md-6 col-md-offset-3" id="about-content">
 		<div class="tab-content">
 		  	<div class="tab-pane active" id="about">
 		  		<p>
@@ -17,15 +20,15 @@
                 </p>
 		  	</div>
 		  	<div class="tab-pane" id="visi">
-		  		<p>
+		  		<h2>
                     Visi :
-                </p>
+                </h2>
                 <p>
                     Terbentuknya komunitas IT sebagai wadah aktualisasi keprofesian massa HMIF
                 </p>
-                <p>
+                <h2>
 					Misi:
-                </p>
+                </h2>
                 <ol>
                     <li>Membentuk dan mengembangkan komunitas berbasis keilmuan informatika</li>
                     <li>Menyalurkan dan mengembangkan potensi anggota Inkubator IT melalui pembelajaran dan aktualisasi diri</li>
@@ -59,4 +62,6 @@
 		  	</div>
 		</div>
 	</div>
+</div>
+
 </div>

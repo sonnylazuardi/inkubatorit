@@ -21,7 +21,7 @@
         if ($incl == "article"){
             $head_title = "Inkubator IT | Articles";
         }else{
-            $head_title = "Inkubator IT | ".$artikel->row()->title;
+            $head_title = "Inkubator IT | ".$post->title;
         }
     }else if ($incl == "about"){
         $img_header = "aboutus.png";
@@ -56,69 +56,72 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="<?php echo base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdn.rawgit.com/karacas/imgLiquid/master/js/imgLiquid-min.js"></script>
 
   </head>
 
   <body>
-    
-     <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="<?php echo base_url() ?>"><h4>Inkubator IT</h4></a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li  class="active"><a href="#"> <img src="<?php echo base_url() ?>transbg/home.png" height="40px" width="40px"> Home</a></li>
-              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <img src="<?php echo base_url() ?>transbg/portofolio.png" height="40px" width="40px"> Portofolio</b></a>
-              <ul class="dropdown-menu">
-                  <li><a href="portofoliomobile.html"><img src="<?php echo base_url() ?>transbg/mobile.png" height="25px" width="25px">  Mobile</a></li>
-                  <li><a href="portofoliogame.html"><img src="<?php echo base_url() ?>transbg/game.png" height="25px" width="25px">  Game</a></li>
-                  <li><a href="portofolioweb.html"><img src="<?php echo base_url() ?>transbg/web.png" height="25px" width="25px">  Web</a></li>
-                  <li><a href="portofoliocyber.html"><img src="<?php echo base_url() ?>transbg/cyber.png" height="25px" width="25px">  Cyber</a></li>
+          </button>
+          <a class="navbar-brand" href="<?php echo base_url() ?>">Inkubator IT</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="<?php if($this->uri->segment(1)==""){echo "active";}?>"><a href="<?php echo base_url() ?>"> <img src="<?php echo base_url() ?>transbg/home.png" height="40px" width="40px"> Home</a></li>
+            <li class="dropdown <?php if($this->uri->segment(1)=="portfolio"){echo "active";}?>"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <img src="<?php echo base_url() ?>transbg/portofolio.png" height="40px" width="40px"> Portofolio</b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('portfolio/category/Mobile/any') ?>"><img src="<?php echo base_url() ?>transbg/mobile.png" height="25px" width="25px">  Mobile</a></li>
+                    <li><a href="<?php echo site_url('portfolio/category/Game/any') ?>"><img src="<?php echo base_url() ?>transbg/game.png" height="25px" width="25px">  Game</a></li>
+                    <li><a href="<?php echo site_url('portfolio/category/Web/any') ?>"><img src="<?php echo base_url() ?>transbg/web.png" height="25px" width="25px">  Web</a></li>
+                    <li><a href="<?php echo site_url('portfolio/category/Cyber/any') ?>"><img src="<?php echo base_url() ?>transbg/cyber.png" height="25px" width="25px">  Cyber</a></li>
                 </ul>
-              </li>
-              <li><a href="artikel.php"> <img src="<?php echo base_url() ?>transbg/artikel.png" height="40px" width="40px"> Artikel</a></li>
-              <li><a href="aboutus.html"> <img src="<?php echo base_url() ?>transbg/aboutus.png" height="40px" width="40px"> Tentang Kami</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+            </li>
+            <li class="<?php if($this->uri->segment(1)=="article"){echo "active";}?>"><a href="<?php echo site_url('article') ?>"> <img src="<?php echo base_url() ?>transbg/artikel.png" height="40px" width="40px"> Artikel</a></li>
+            <li class="<?php if($this->uri->segment(1)=="about"){echo "active";}?>"><a href="<?php echo site_url('about') ?>"> <img src="<?php echo base_url() ?>transbg/aboutus.png" height="40px" width="40px"> Tentang Kami</a></li>
+        </ul>
         </div>
       </div>
+    </nav>
+    <div class="content">
+        <?php $this->load->view($incl); ?>
     </div>
-    
-    <?php $this->load->view($incl); ?>
     
     <div id="footer">
       <div class="container">
+        <hr>
         <div class="row">
-        <div class="span4">
+        <div class="col-sm-4">
           <ul class="unstyled">
             <li><h4 class="text-info">Karya Kami</h4></li>
-            <li><a href="portofoliomobile.html"><h5>Mobile</h5></a></li>
-            <li><a href="portofoliogame.html"><h5>Game</h5></a></li>
-            <li><a href="portofolioweb.html"><h5>Web</h5></a></li>
-            <li><a href="portofoliocyber.html"><h5>Cyber</h5></a></li>
+            <li><a href="<?php echo site_url('portfolio/category/Mobile/any') ?>"><h5>Mobile</h5></a></li>
+            <li><a href="<?php echo site_url('portfolio/category/Game/any') ?>"><h5>Game</h5></a></li>
+            <li><a href="<?php echo site_url('portfolio/category/Web/any') ?>"><h5>Web</h5></a></li>
+            <li><a href="<?php echo site_url('portfolio/category/Cyber/any') ?>"><h5>Cyber</h5></a></li>
           </ul>
         </div>
-        <div class="span4">
+        <div class="col-sm-4">
           <ul class="unstyled">
             <li><h4 class="text-info">Departemen Kami</h4></li>
-            <li><a href="aboutus.html"><h5>About Us</h5></a></li>
-            <li><a href="artikel.php"><h5>Artikel</h5></a></li>
+            <li><a href="<?php echo site_url('about') ?>"><h5>About Us</h5></a></li>
+            <li><a href="<?php echo site_url('article') ?>"><h5>Artikel</h5></a></li>
           </ul>
         </div>
-        <div class="span2">
+        <div class="col-sm-2">
             <img src="<?php echo base_url() ?>img/HMIF.jpg" height="100px" width="120px">
             
         </div>
-        <div class="span2">
+        <div class="col-sm-2">
           <img src="<?php echo base_url() ?>transbg/logoiit.png" height="100px" width="120px">
         </div>
         </div>
@@ -126,29 +129,15 @@
       <hr>
       <div class="container">
       <p class="pull-right"><a href="#">Kembali ke Atas</a></p>
-            <p>&copy; <a href="../admin/index.php" data-toggle="modal">2013 Azif, Inc.</a> <!--&middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>--></p></div>
+            <p>&copy; <a href="#">2014 Team Website IIT.</a></p></div>
     </div>
-
- 
     
-     <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?php echo base_url() ?>assets/js/jquery.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-transition.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-alert.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-modal.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-dropdown.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-scrollspy.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-tab.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-tooltip.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-popover.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-button.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-collapse.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-carousel.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap-typeahead.js"></script>
-
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".img-wrapper").imgLiquid();
+        });
+    </script>
+  
   </body>
 </html>

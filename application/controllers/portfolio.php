@@ -5,11 +5,11 @@
 		{
 			$this->load->model('portofolio_model');
 			$data['incl'] = 'portfolio';
-			$data['port'] = $this->portofolio_model->get_port(2,0);
+			$data['port'] = $this->portofolio_model->get_port(12,0);
 			$data['kategori'] = 'all';
 			$data['tahun'] = 'any';
 			$data['new_exist'] = false;
-			$data['old_exist'] = ($this->portofolio_model->get_port(2,2)->num_rows() > 0);
+			$data['old_exist'] = ($this->portofolio_model->get_port(12,12)->num_rows() > 0);
 			$data['page'] = 1;
 			$this->load->view('page',$data);
 		}
@@ -21,9 +21,9 @@
 			$data['kategori'] = 'all';
 			$data['tahun'] = 'any';
 			if ($p > 1){
-				$data['port'] = $this->portofolio_model->get_port(2,($p-1)*2);
-				$data['new_exist'] = ($this->portofolio_model->get_port(2,($p-2)*2)->num_rows() > 0);
-				$data['old_exist'] = ($this->portofolio_model->get_port(2,$p*2)->num_rows() > 0);
+				$data['port'] = $this->portofolio_model->get_port(12,($p-1)*12);
+				$data['new_exist'] = ($this->portofolio_model->get_port(12,($p-2)*12)->num_rows() > 0);
+				$data['old_exist'] = ($this->portofolio_model->get_port(12,$p*12)->num_rows() > 0);
 				$data['page'] = $p;
 				$this->load->view('page',$data);
 			}else{
