@@ -77,7 +77,7 @@
   <div class="row">
     <div class="col-sm-12" align="center">
       <div class="row" id="home-box">
-        <div class="col-xs-6" align="center">
+        <div class="col-md-6" align="center">
           <h2>Karya Terbaru</h2>
           <hr>
           <div class="inner-home">
@@ -115,7 +115,7 @@
             </div>
           </div>
         </div>
-         <div class="col-xs-6" align="center">
+         <div class="col-md-6" align="center">
           <h2>Artikel Terkini</h2>
           <hr>
           <?php 
@@ -202,12 +202,21 @@
 
 <div class="cons">
   <div class="container featurette">
-    <img class="featurette-image pull-right" src="img/smile2.png" height="250px" width="250px">
-    <h2 class="featurette-heading"><span class="muted"></span></h2>
-    <blockquote class="pull-right">
-      <h4>"Inkubator IT telah meghasilkan karya yang memuaskan dari segala aspek yang saya inginkan."
-      </h4>
-      <em>Klien Kami</em>
-    </blockquote>
+    <div class="row">
+      <div class="col-sm-5">
+        <blockquote class="pull-right">
+          <h4>"Inkubator IT telah meghasilkan karya yang memuaskan dari segala aspek yang saya inginkan."
+          </h4>
+          <em>Klien Kami</em>
+        </blockquote>
+      </div>
+      <div class="col-sm-3">
+        <img class="featurette-image pull-right" src="img/smile2.png" style="width:100%">
+      </div>
+      <div class="col-sm-4">
+        <a class="twitter-timeline" href="https://twitter.com/inkubatorIT" data-widget-id="383471319829868544">Tweets by @inkubatorIT</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+    </div>
   </div>
 </div>

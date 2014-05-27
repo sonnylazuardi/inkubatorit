@@ -88,7 +88,7 @@ h1, h2, h3, h4 {
 }
 
 .collapse2:hover {
-	max-height: 400px;
+	max-height: 500px;
 }
 
 .unstyled {
@@ -109,7 +109,7 @@ h1, h2, h3, h4 {
 	padding-right: 30px;
 }
 .cons blockquote {
-	margin-top: 50px;
+	margin-top: 40px;
 	margin-right: 20px;
 }
 .cons:before,
